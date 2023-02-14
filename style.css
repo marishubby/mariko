@@ -44,27 +44,27 @@ body {
 }
 
 #cake {
-  background-image: url("/imgs/cake.png");
+  background-image: url("./imgs/cake.png");
 }
 
 #present {
-  background-image: url("/imgs/present.png");
+  background-image: url("./imgs/present.png");
 }
 
 #kiss {
-  background-image: url("/imgs/kiss.gif");
+  background-image: url("./imgs/kiss.gif");
 }
 
 #ass {
-  background-image: url("/imgs/ass.gif");
+  background-image: url("./imgs/ass.gif");
 }
 
 #kith {
-  background-image: url("/imgs/kith.gif");
+  background-image: url("./imgs/kith.gif");
 }
 
 #duck {
-  background-image: url("/imgs/duck.jpg");
+  background-image: url("./imgs/duck.jpg");
 }
 
 .blocked {
