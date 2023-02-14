@@ -126,7 +126,7 @@ body {
 
 @media (max-width: 920px) {
   #header {
-    content: url("/imgs/short.gif");
+    content: url("./imgs/short.gif");
     width: 75vw;
     margin: 0 auto;
   }
