@@ -1,0 +1,158 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  padding: 2%;
+  text-align: center;
+  background: radial-gradient(#ffffff, #ea9ab2);
+}
+
+#header > img {
+  width: 60vw;
+}
+
+#grid {
+  margin: 2rem auto;
+  display: inline-grid;
+  grid-auto-flow: column;
+  grid-gap: 2rem;
+  grid-template-rows: 250px 250px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  padding: 10px;
+}
+
+.card {
+  cursor: pointer;
+  height: 200px;
+  width: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  box-shadow: 0 0 10px 10px rgba(10, 10, 10, 0.0666666667);
+  transition: 0.25s ease-in-out;
+}
+.card div.blocked {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(5px);
+}
+
+.card:hover {
+  transform: scale(1.1);
+}
+
+#cake {
+  background-image: url("/imgs/cake.png");
+}
+
+#present {
+  background-image: url("/imgs/present.png");
+}
+
+#kiss {
+  background-image: url("/imgs/kiss.gif");
+}
+
+#ass {
+  background-image: url("/imgs/ass.gif");
+}
+
+#kith {
+  background-image: url("/imgs/kith.gif");
+}
+
+#duck {
+  background-image: url("/imgs/duck.jpg");
+}
+
+.blocked {
+  backdrop-filter: blur(3px);
+}
+
+#footer {
+  text-align: center;
+  font-family: "Fira Sans", sans-serif;
+}
+
+#overlay {
+  font-family: monospace;
+  position: absolute;
+  top: 20%;
+  left: 15%;
+  width: 70%;
+  height: 60%;
+  background-color: #eaf2d7;
+  transition: all 0.2s ease-in-out;
+  transform: scale(0);
+  opacity: 0;
+  z-index: 10;
+}
+
+#overlay.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+#bar {
+  width: 100%;
+  height: 1rem;
+}
+
+#close {
+  cursor: pointer;
+  position: relative;
+  left: 48%;
+  top: 10%;
+}
+
+.hidden {
+  display: none;
+}
+
+#content {
+  margin: 1% auto;
+  padding: 1rem;
+  width: 100%;
+  height: 90%;
+}
+
+#content > p {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  height: 100%;
+}
+
+@media (max-width: 920px) {
+  #header {
+    content: url("/imgs/short.gif");
+    width: 75vw;
+    margin: 0 auto;
+  }
+  #grid {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: center;
+    max-height: 800px;
+  }
+}
+@media (max-width: 600px) {
+  #header {
+    width: 80vw;
+  }
+  #header img {
+    width: 100%;
+  }
+  #grid {
+    max-height: 600px;
+    max-width: 60vw;
+  }
+  .card {
+    height: 150px;
+    width: 150px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
