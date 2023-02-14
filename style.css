@@ -1,3 +1,9 @@
+$welcome-white: #efcfe3;
+$welcome-lgreen: #eaf2d7;
+$welcome-lblue: #b3dee2;
+$welcome-dpink: #e27396;
+$welcome-pink: #ea9ab2;
+
 * {
   box-sizing: border-box;
 }
@@ -5,7 +11,7 @@
 body {
   padding: 2%;
   text-align: center;
-  background: radial-gradient(#ffffff, #ea9ab2);
+  background: radial-gradient(#ffffff, $welcome-pink);
 }
 
 #header > img {
@@ -18,7 +24,7 @@ body {
   grid-auto-flow: column;
   grid-gap: 2rem;
   grid-template-rows: 250px 250px;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));;
   padding: 10px;
 }
 
@@ -29,14 +35,14 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  box-shadow: 0 0 10px 10px rgba(10, 10, 10, 0.0666666667);
+  box-shadow: 0 0 10px 10px #0a0a0a11;
   transition: 0.25s ease-in-out;
-}
-.card div.blocked {
-  width: 100%;
-  height: 100%;
-  background: rgba(255, 255, 255, 0.6);
-  backdrop-filter: blur(5px);
+  div.blocked {
+    width: 100%;
+    height: 100%;
+    background: rgba(100%, 100%, 100%, 60%);
+    backdrop-filter: blur(5px);
+  }
 }
 
 .card:hover {
@@ -44,27 +50,27 @@ body {
 }
 
 #cake {
-  background-image: url("/imgs/cake.png");
+  background-image: url('./imgs/cake.png');
 }
 
 #present {
-  background-image: url("/imgs/present.png");
+  background-image: url('./imgs/present.png');
 }
 
 #kiss {
-  background-image: url("/imgs/kiss.gif");
+  background-image: url('./imgs/kiss.gif');
 }
 
 #ass {
-  background-image: url("/imgs/ass.gif");
+  background-image: url('./imgs/ass.gif');
 }
 
 #kith {
-  background-image: url("/imgs/kith.gif");
+  background-image: url('./imgs/kith.gif');
 }
 
 #duck {
-  background-image: url("/imgs/duck.jpg");
+  background-image: url('./imgs/duck.jpg');
 }
 
 .blocked {
@@ -83,8 +89,8 @@ body {
   left: 15%;
   width: 70%;
   height: 60%;
-  background-color: #eaf2d7;
-  transition: all 0.2s ease-in-out;
+  background-color: $welcome-lgreen;
+  transition: all .2s ease-in-out;
   transform: scale(0);
   opacity: 0;
   z-index: 10;
@@ -126,7 +132,7 @@ body {
 
 @media (max-width: 920px) {
   #header {
-    content: url("/imgs/short.gif");
+    content: url("./imgs/short.gif");
     width: 75vw;
     margin: 0 auto;
   }
@@ -138,12 +144,13 @@ body {
     max-height: 800px;
   }
 }
+
 @media (max-width: 600px) {
   #header {
     width: 80vw;
-  }
-  #header img {
-    width: 100%;
+    img {
+      width: 100%;
+    }
   }
   #grid {
     max-height: 600px;
@@ -154,5 +161,3 @@ body {
     width: 150px;
   }
 }
-
-/*# sourceMappingURL=style.css.map */
